@@ -1,12 +1,13 @@
 import React from "react";
 import NavBar from "./components/Navigation";
 import UserCard from "./components/UserCard";
+import FollowersCard from "./components/FollowersCard";
 import axios from "axios";
 
 class App extends React.Component {
   state = {
     user: [],
-    followers = []
+    followers: []
   };
 
   handleChange = event => {
@@ -31,7 +32,7 @@ class App extends React.Component {
         this.setState({ followers: profile.data });
         console.log(profile.data);
       })
-      .catch(err => console.log(err));
+      .catch(error => console.log(error));
   }
 
   render() {
@@ -52,6 +53,16 @@ class App extends React.Component {
               location={profile.location}
             />
           ))}
+          <div className="followers">
+            {this.state.followers.map(followerProfile => (
+              <FollowersCard
+                key={followerProfile.id}
+                login={followerProfile.login}
+                img={followerProfile.avatar_url}
+                url={followerProfile.html_url}
+              />
+            ))}
+          </div>
         </div>
       </div>
     );
