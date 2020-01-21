@@ -5,7 +5,8 @@ import axios from "axios";
 
 class App extends React.Component {
   state = {
-    user: []
+    user: [],
+    followers = []
   };
 
   handleChange = event => {
@@ -24,6 +25,13 @@ class App extends React.Component {
         console.log(profile.data);
       })
       .catch(error => console.log(error));
+    axios
+      .get("https://api.github.com/users/bkoehler2016/followers")
+      .then(profile => {
+        this.setState({ followers: profile.data });
+        console.log(profile.data);
+      })
+      .catch(err => console.log(err));
   }
 
   render() {
