@@ -3,10 +3,16 @@ import { Card, CardTitle, CardImg } from "reactstrap";
 
 const FollowerCard = props => {
   return (
-    <Card>
-      <CardImg src={props.img} alt={props.login}></CardImg>
+    <Card className="card">
+      <CardImg
+        className="card-image"
+        src={props.img}
+        alt={props.login}
+      ></CardImg>
       <CardTitle>
-        <a href={props.url}>{props.login}</a>
+        <a className="card-link" href={props.url}>
+          {props.login}
+        </a>
       </CardTitle>
     </Card>
   );

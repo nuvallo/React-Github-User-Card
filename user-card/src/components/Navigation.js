@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  Navbar,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-  NavbarText
-} from "reactstrap";
+import { Navbar, NavbarBrand, Nav, NavItem, NavLink } from "reactstrap";
 
 class NavBar extends React.Component {
   render() {
@@ -19,7 +12,6 @@ class NavBar extends React.Component {
               <NavLink href="/components/">Home</NavLink>
             </NavItem>
           </Nav>
-          <NavbarText>Simple Text</NavbarText>
         </Navbar>
       </div>
     );

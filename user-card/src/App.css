@@ -1,0 +1,27 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  max-width: 800px;
+  text-align: center;
+  margin: 2%;
+  padding: 20px;
+  background: #add8e6 !important;
+  color: #333;
+}
+
+.card-image {
+  max-width: 40%;
+  margin-bottom: 5%;
+}
+
+.card-link {
+  color: #333;
+  font-size: 20px;
+  text-decoration: underline;
+}

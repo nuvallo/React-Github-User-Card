@@ -3,6 +3,7 @@ import NavBar from "./components/Navigation";
 import UserCard from "./components/UserCard";
 import FollowersCard from "./components/FollowersCard";
 import axios from "axios";
+import "./App.css";
 
 class App extends React.Component {
   state = {
@@ -27,7 +28,7 @@ class App extends React.Component {
       })
       .catch(error => console.log(error));
     axios
-      .get("https://api.github.com/users/bkoehler2016/followers")
+      .get("https://api.github.com/users/nuvallo/followers")
       .then(profile => {
         this.setState({ followers: profile.data });
         console.log(profile.data);
