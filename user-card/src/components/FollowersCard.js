@@ -10,7 +10,7 @@ const FollowerCard = props => {
         alt={props.login}
       ></CardImg>
       <CardTitle>
-        <a className="card-link" href={props.url}>
+        <a className="card-link" href={props.url} target="_blank">
           {props.login}
         </a>
       </CardTitle>

@@ -10,7 +10,7 @@ const UserCard = props => {
           <strong>{props.login}</strong>
         </CardTitle>
         <CardSubtitle>
-          <a className="card-link" href={props.url}>
+          <a className="card-link" href={props.url} target="_blank">
             Profile
           </a>
         </CardSubtitle>
