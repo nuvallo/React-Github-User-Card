@@ -11,12 +11,6 @@ class App extends React.Component {
     followers: []
   };
 
-  handleChange = event => {
-    this.setState({
-      [event.target.name]: event.target.value
-    });
-  };
-
   componentDidMount() {
     axios
       .get(`https://api.github.com/users/nuvallo`)
